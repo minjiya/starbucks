@@ -1,20 +1,3 @@
-const serchEl = document.querySelector('.search');
-const serchInputEl = serchEl.querySelector('input');
-
-serchEl.addEventListener('click', function() {
-    serchInputEl.focus();
-});
-
-serchInputEl.addEventListener('focus', function() {
-    serchEl.classList.add('focused');
-    serchInputEl.setAttribute('placeholder', '통합검색');
-});
-
-serchInputEl.addEventListener('blur', function() {
-    serchEl.classList.remove('focused');
-    serchInputEl.setAttribute('placeholder', '');
-});
-
 // 우측 배지
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
@@ -151,7 +134,3 @@ spyEls.forEach(function (spyEl) {
         .setClassToggle(spyEl, 'show')
         .addTo(new ScrollMagic.Controller());
 });
-
-
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear(); //2022
